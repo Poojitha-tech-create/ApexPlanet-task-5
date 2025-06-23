@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Girly Shopping App</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Girly Shopping App</h1>
+
+    <input 
+      type="text" 
+      id="search" 
+      placeholder="Search for products..." 
+      oninput="searchProducts()" 
+    />
+
+    <div class="header-buttons">
+      <button onclick="showCart()">🛒 Cart</button>
+      <button onclick="showWishlist()">💖 Wishlist</button>
+      <button onclick="showOrders()">📦 Orders</button>
+      <button onclick="showRecentlyViewed()">👀 Recently Viewed</button>
+      <button onclick="surpriseMe()">🎁 Surprise Me!</button>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li onclick="filterCategory(null)">See All</li>
+      <li onclick="filterCategory('dresses')">Dresses</li>
+      <li onclick="filterCategory('electronics')">Electronics</li>
+      <li onclick="filterCategory('beauty')">Beauty</li>
+      <li onclick="filterCategory('home')">Home Appliances</li>
+      <li onclick="filterCategory('toys')">Toys</li>
+      <li onclick="filterCategory('mobiles')">Mobiles</li>
+    </ul>
+  </nav>
+
+  <section id="products"></section>
+
+  <!-- Product Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content" id="popupContent">
+      <!-- JS fills this dynamically -->
+    </div>
+  </div>
+
+  <!-- JS Files -->
+  <script src="js/productData.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
